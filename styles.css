@@ -18,6 +18,7 @@ header h1 {
   font-size: 24px;
   outline-color: gold;
   margin: 1% 2%;
+  text-align: center;
 }
 .button-30 {
   align-items: center;
@@ -77,9 +78,10 @@ header h1 {
   display: flex;
   /* justify-content: space-evenly; */
   align-items: center;
-
+  max-width: 100%;
   margin-top: 1%;
   padding: 10px 18px;
+  min-height: fit-content;
 }
 .emoji :first-child {
   margin-right: 10%;
@@ -94,12 +96,44 @@ header h1 {
 }
 .titles {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   max-width: 100%;
   height: 60px;
   background-color: rgba(247, 134, 255, 0.5);
   border-radius: 10px;
   margin: 1% 0;
-  padding: 1px 5px;
+  padding: 1px 12px;
+  gap: 22%;
+}
+@media screen and (max-width: 920px) {
+  p {
+    font-size: 25px;
+  }
+  .emoji :first-child {
+    width: fit-content;
+    /* margin-right: 1%; */
+  }
+  .emoji :nth-child(2) {
+    height: max-content;
+  }
+}
+@media screen and (max-width: 720px) {
+  .emoji :last-child {
+    width: 40%;
+    display: none;
+  }
+  p {
+    font-size: 20px;
+  }
+  #search {
+    font-size: 16px;
+    width: 40%;
+  }
+  .emoji :first-child {
+    width: fit-content;
+  }
+  .emoji :nth-child(2) {
+    width: fit-content;
+  }
 }
