@@ -37,10 +37,13 @@ function searchBar() {
 function getEmojis(tsk) {
   let name = tsk.target.value;
   let searchResult = emojiList.filter((emoji) => {
-    if (emoji.description.includes(name)) return emoji;
-    else if (emoji.category.includes(name)) return emoji;
-    else if (emoji.aliases.includes(name)) return emoji;
-    else if (emoji.tags.includes(name)) return emoji;
+    if (
+      emoji.description.includes(name) ||
+      emoji.category.includes(name) ||
+      emoji.aliases.includes(name) ||
+      emoji.tags.includes(name)
+    )
+      return emoji;
   });
 
   emojiRslt.innerText = "";
