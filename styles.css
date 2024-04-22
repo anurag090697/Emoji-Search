@@ -117,6 +117,10 @@ header h1 {
   .emoji :nth-child(2) {
     height: max-content;
   }
+  .titles{
+    
+    gap: 5%
+  }
 }
 @media screen and (max-width: 720px) {
   .emoji :last-child {
@@ -135,5 +139,9 @@ header h1 {
   }
   .emoji :nth-child(2) {
     width: fit-content;
+  }
+  .titles{
+    display: none;
+    gap: 1%
   }
 }
